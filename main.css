@@ -1,0 +1,121 @@
+*
+{
+  box-sizing: border-box;
+}
+
+html, body
+{
+  margin: 0;
+  padding: 0;
+}
+
+body
+{
+  font: 1em -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  user-select: none;
+}
+
+#app
+{
+  position: relative;
+  width: 500px;
+  height: 500px;
+  margin: 100px auto;
+}
+
+#snakeGameCanvas
+{
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+#snakeGameCanvas
+{
+  display: grid;
+  gap: 5px;
+}
+
+.cell
+{
+  background: #eee;
+  border-radius: 5px;
+}
+
+.snakeBody
+{
+  background: tomato;
+}
+
+.snakeHead
+{
+  background: red;
+}
+
+.mouseBody
+{
+  background: dodgerblue;
+}
+
+input:not([type="radio"]),
+button
+{
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  font: 1em -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+label
+{
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.form-separator
+{
+
+  margin-top: 10px;
+}
+
+#gameSettings
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, .8);
+  padding: 10px 15px;
+}
+
+#gameSettings .label
+{
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+#gameSettings .label:not(:first-child)
+{
+  margin-top: 30px
+}
+
+#noplay {
+  display: none;
+}
+
+@media(max-width: 580px)
+{
+  #app {
+    display: none;
+  }
+
+  #noplay {
+    display: block;
+    padding: 30px;
+    text-align: center;
+  }
+}

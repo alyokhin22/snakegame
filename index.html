@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Snake Game (beta)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="main.css">
+  <script type="module" src="main.js"></script>
+</head>
+<body>
+  <div id="app">
+    <div id="snakeGameCanvas"></div>
+    <div id="gameSettings">
+
+      <form action="">
+
+        <div class="label">Размер игрового поля</div>
+        <div class="form-separator">
+          <input type="number" name="canvasSize" value="5" step="1" min="5" max="100">
+        </div>
+
+        <div class="label">Размер змеи</div>
+        <div class="form-separator">
+          <input type="number" name="snakeSize" value="3" step="1" min="3" max="98">
+        </div>
+
+        <div class="label">Сложность игры</div>
+        <div class="form-separator">
+
+          <label>
+            <input type="radio" value="easy" name="difficulty">
+            <div>
+              <b>Лёгкая</b> - проиграть никак. Змея не ест саму себя и не врезается в стены
+            </div>
+          </label>
+
+          <label>
+            <input type="radio" value="medium" name="difficulty" checked>
+            <div>
+              <b>Средняя</b> - змея не врезается в стены, но может съесть саму себя
+            </div>
+          </label>
+
+          <label>
+            <input type="radio" value="hard" name="difficulty">
+            <div>
+              <b>Сложная</b> - змея может врезаться в стену или съесть саму себя
+            </div>
+          </label>
+        </div>
+
+        <div class="label">Скорость змеи (ячеек в секунду)</div>
+        <div class="form-separator">
+          <input type="number" name="snakeSpeed" value="1" step="1" min="1" max="5">
+        </div>
+
+        <br><br>
+
+        <div class="form-separator">
+          <button>Начать</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="noplay">
+    В игру можно играть только на компьютере
+  </div>
+</body>
+</html>
